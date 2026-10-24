@@ -2,7 +2,7 @@
 
 A silly survival game: you are a statue, and pigeons want to poop on you. Tap them away, buy upgrades with coins from tourists, and survive as long as you can.
 
-**Play it:** https://henri1402.github.io
+**Play it:** https://henri1402.github.io/statue-duty/
 
 ## What's in this folder
 
@@ -26,9 +26,9 @@ You only need to rebuild the Android app in PWABuilder if you change the app's n
 ## Publishing on Google Play (short version)
 
 1. Create a Google Play Console account and verify your identity.
-2. Go to https://www.pwabuilder.com, enter https://henri1402.github.io, and download the Android package.
+2. Go to https://www.pwabuilder.com, enter https://henri1402.github.io/statue-duty/, and download the Android package.
 3. **Keep the signing key file from PWABuilder somewhere safe and private. Never upload it here.** You need it for every future Android update.
-4. PWABuilder also gives you an `assetlinks.json` file. Put it in a folder called `.well-known` in this repository, so it is at https://henri1402.github.io/.well-known/assetlinks.json. This proves the app and the website belong together, and removes the browser bar from the app.
-5. Upload the app to a closed test with at least 12 testers for 14 days, fill in the store listing (use https://henri1402.github.io/privacy.html as the privacy policy), then apply for production.
+4. PWABuilder also gives you an `assetlinks.json` file. Google only looks for it at the root of the website: https://henri1402.github.io/.well-known/assetlinks.json. Because this game lives in a sub-folder (`/statue-duty/`), that file goes in a separate small repository named `Henri1402.github.io`, inside a folder called `.well-known` (plus an empty `.nojekyll` file). This proves the app and the website belong together, and removes the browser bar from the app.
+5. Upload the app to a closed test with at least 12 testers for 14 days, fill in the store listing (use https://henri1402.github.io/statue-duty/privacy.html as the privacy policy), then apply for production.
 
 If you ever add ads, update `privacy.html` first.
